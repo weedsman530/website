@@ -82,6 +82,19 @@ h2 {
   
 }
 
+.grid-container6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 20px;
+  width: 60%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+  justify-content: center;
+  
+}
+
 .card {
   background: #fff;
   border-radius: 15px;
@@ -174,7 +187,7 @@ h2 {
 
 
 
-.adult2  , .adult3 , .adult4 , .adult5{
+.adult2  , .adult3 , .adult4 , .adult5 ,.adult6{
     width: 70%;
     height: 220px;
     border: 5px solid rgb(177, 175, 175);
@@ -192,7 +205,8 @@ h2 {
 .adult2 h2 , 
 .adult3 h2 , 
 .adult4 h2 , 
-.adult5 h2{
+.adult5 h2
+.adult6 h2{
     position: absolute;
     right: 15%;
     top: 20px;
