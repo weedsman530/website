@@ -1,0 +1,353 @@
+body {
+  font-family: "Cairo", sans-serif;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  height: 8000px;
+  margin: 0;
+  gap: 10px;
+}
+
+/* h2 {
+  margin-bottom: 10px;
+  color: #333;
+ 
+  text-align: center;
+} */
+
+.grid-container1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 10px;
+  width: 70%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+  /* left: 7%; */
+ 
+
+ 
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  width: 70%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+}
+
+.grid-container3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 20px;
+  width: 50%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+  justify-content: center;
+  
+}
+
+.grid-container4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 20px;
+  width: 40%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+  justify-content: center;
+  
+}
+
+.grid-container5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 20px;
+  width: 60%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+  justify-content: center;
+  
+}
+
+.grid-container6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 20px;
+  width: 60%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+  justify-content: center;
+  
+}
+
+.grid-container7 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+  gap: 20px;
+  width: 60%;
+  margin-top: 20px;
+  border: 2px solid salmon;
+  position: relative;
+  border-radius: 15px;
+  justify-content: center;
+  
+}
+
+
+.grid-container1 , .grid-container2 ,.grid-container3 ,
+.grid-container4 , .grid-container5 , .grid-container6 , .grid-container7{
+  display: none;
+}
+
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  
+  border: 3px solid goldenrod;
+  
+  
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-bottom: 1px solid #eee;
+}
+
+.card h3 {
+  text-align: center;
+  margin: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.active-ingredients {
+  display: none;
+  padding: 15px;
+  font-size: 13px;
+  color: #444;
+  text-align: center;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+   white-space: pre-line;
+  line-height: 1.6;
+  
+}
+
+/* .active-ingredients b + br + br {
+  display: none;
+}
+.active-ingredients {
+  white-space: pre-wrap;
+  word-break: break-word;
+} */
+
+.dose {
+    display: none;
+    padding: 15px;
+    font-size: 13px;
+    color: #444;
+    
+    background: #fafafa;
+    border-top: 1px solid #eee;
+    white-space: pre-line;
+    line-height: 1.6;
+    direction: rtl;
+    
+    
+}
+
+.card:hover {
+  transform: scale(1.07);
+}
+
+.card:hover .active-ingredients ,
+.card:hover .dose {
+  display: block;
+}
+
+
+.adult  , .adult2  , .adult3 , .adult4 , .adult5 ,.adult6 , .adult7{
+    min-width: 500px;
+    max-width: 50%;
+    
+    height: 220px;
+    border: 5px solid rgb(177, 175, 175);
+    background: rgb(236, 233, 233);
+    
+    position: relative;
+    border-radius: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    
+    
+    
+    
+}
+
+.adult  , .adult2  , .adult3 , .adult4 , .adult5 ,.adult6 , .adult7 {
+  display: none;
+}
+[class^="adult"],
+[id^="gridContainer"] {
+  display: none;
+}
+
+/* عند الظهور: الـ adult فليكس */
+[class^="adult"].show {
+  display: flex !important;
+  
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+/* عند الظهور: الـ gridContainer جريد */
+[id^="gridContainer"].show {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  animation: fadeIn 0.4s ease;
+}
+
+
+/* .adult2  , .adult3 , .adult4 , .adult5 ,.adult6{
+    width: 70%;
+    height: 220px;
+    border: 5px solid rgb(177, 175, 175);
+    background: rgb(236, 233, 233);
+    
+    position: relative;
+    border-radius: 20px;
+    margin-top: 10px;
+    box-shadow: inset 3px 3px 10px goldenrod , 
+    inset -3px -3px 10px goldenrod;
+    
+} */
+
+.adult h2  , 
+.adult2 h2 , 
+.adult3 h2 , 
+.adult4 h2 , 
+.adult5 h2
+.adult6 h2
+.adult7 h2
+{
+    position: relative;
+    /* right: 15%; */
+    /* top: 20px; */
+    color: rgb(0, 0, 0);
+    border: 3px solid salmon;
+    width: 50%;
+    height: 60%;
+
+    text-align: center;
+}
+.adult img , 
+.adult2 img , 
+.adult3 img , 
+.adult4 img , 
+.adult5 img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* left: 15%; */
+    /* top: 10px; */
+    border: 3px solid goldenrod;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+
+
+
+
+.category-container {
+  border: 3px solid salmon;
+  width: 60%;
+  height: 100px;
+  border-radius: 12px;
+  position: relative;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.slide{
+  width: 80px;
+  height: 80px;
+  border: 3px solid green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in;
+  position: relative;
+  cursor: pointer;
+}
+
+.slide h3 {
+  font-size: 20px;
+  display: none;
+  position: absolute;
+  right: 30px;
+ 
+}
+
+
+
+
+.slide img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+
+.slide:hover {
+  width: 400px;
+  height: 100px;
+  border-radius: 12px;
+  justify-content: space-around;
+}
+
+.slide:hover img {
+  width: 100px; height: 100px; border-radius: 50%;
+   transform: translateX(-120%);
+   object-fit: cover;
+}
+
+.slide:hover h3 {
+  display: block;
+}
