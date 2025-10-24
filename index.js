@@ -6,7 +6,7 @@ async function loadExcelFiles() {
     const workbook = XLSX.read(data, { type: "array" });
 
     // حنقرأ أول 5 شيتات أو أقل لو عدد الشيتات أقل
-    const sheetCount = Math.min(workbook.SheetNames.length, 5);
+    const sheetCount = Math.min(workbook.SheetNames.length, 10);
 
     for (let i = 0; i < sheetCount; i++) {
       const sheetName = workbook.SheetNames[i];
@@ -52,3 +52,4 @@ async function loadExcelFiles() {
 }
 
 loadExcelFiles();
+
